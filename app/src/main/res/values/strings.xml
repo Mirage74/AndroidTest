@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">TestExpress</string>
+    <string name="app_name">Capitals test</string>
+    <string name="don_t_have_an_account_yet">Don\'t have an account yet?</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_item1">item1</string>
+    <string name="action_item2">item2</string>
+    <string name="action_item3">item3</string>
 </resources>

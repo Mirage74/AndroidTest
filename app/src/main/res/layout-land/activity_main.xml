@@ -3,14 +3,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/unsplash"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+
+
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="match_parent"
+            android:text="0"
+            android:layout_height="110dp"
+            android:textSize="60sp"
+            android:gravity="center|end"
+            android:background="@color/white"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:columnCount="1"
-        android:rowCount="1" />
+        android:rowCount="1"
+        android:columnCount="1">
+
+        <Button
+            android:id="@+id/btnGET"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:background="@color/white"
+            android:text="GET"
+            android:textColor="@color/orange"
+            android:textSize="26sp" />
+
+
+    </GridLayout>
 
 
     <TextView
@@ -19,7 +50,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="450px"
-        android:text="Login"
+        android:text="Vert"
         android:textColor="#FFFFFF"
         android:textSize="100px" />
 
@@ -38,28 +69,28 @@
         android:textCursorDrawable="@null" />
 
     <EditText
-        android:id="@+id/pass1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="320dp"
-        android:layout_marginRight="40dp"
+        android:hint="password"
+        android:textCursorDrawable="@null"
         android:drawableStart="@drawable/lock"
         android:drawablePadding="5dp"
-        android:gravity="start"
-        android:hint="password"
         android:inputType="textPassword"
-        android:textCursorDrawable="@null" />
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="320dp"
+        android:id="@+id/pass1"
+        android:gravity="start" />
 
     <ImageView
         android:id="@+id/toggle_view1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="330dp"
         android:layout_marginTop="330dp"
-        android:clickable="true"
-        android:onClick="toggle"
+        android:layout_marginStart="330dp"
         android:scaleType="centerCrop"
+        android:onClick="toggle"
+        android:clickable="true"
         android:src="@drawable/eye_off" />
 
     <Button
@@ -71,45 +102,38 @@
         android:layout_marginRight="40dp"
         android:background="@drawable/round_button_2"
         android:gravity="center"
-        android:text="LOGIN"
+        android:onClick="login"
+        android:text="vertical"
         android:textAllCaps="false"
-        android:textColor="#FFF"
+        android:textColor="#FFB"
         android:textSize="20dp" />
 
     <TextView
         android:id="@+id/register1"
         android:layout_width="wrap_content"
         android:layout_height="23dp"
-        android:layout_marginLeft="100dp"
         android:layout_marginTop="600dp"
-        android:focusable="true"
+        android:layout_marginLeft="100dp"
         android:fontFamily="sans-serif"
         android:text="@string/don_t_have_an_account_yet"
         android:textColor="#FFF"
-        android:textSize="12dp" />
+        android:textSize="12dp"
+        android:focusable="true" />
 
     <TextView
         android:id="@+id/register2"
         android:layout_width="wrap_content"
         android:layout_height="23dp"
         android:layout_marginTop="600dp"
-        android:layout_toEndOf="@+id/register1"
-        android:clickable="true"
-        android:focusable="true"
         android:fontFamily="sans-serif"
-        android:onClick="register"
+        android:clickable="true"
         android:text="   Register."
+        android:onClick="register"
+        android:layout_toEndOf="@+id/register1"
         android:textColor="#00d9d9"
-        android:textSize="12dp" />
+        android:textSize="12dp"
+        android:focusable="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Other Activity"
-        android:gravity="center"
-        android:id="@+id/button_other_activity"
-        android:layout_below="@+id/register2"
-        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>
